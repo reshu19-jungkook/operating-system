@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *f;
+    char str[100];
+
+    printf("Enter text: ");
+    fgets(str, 100, stdin);
+
+    f = fopen("output.txt", "w");
+    fputs(str, f);
+    fclose(f);
+
+    printf("File created successfully!");
+
+    return 0;
+}
+
+output:
+
+Enter text: reshma sobitha
+File created successfullly!
