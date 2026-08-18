@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    FILE *f;
+    char word[20], line[100];
+
+    printf("Enter word: ");
+    scanf("%s",word);
+
+    f=fopen("data.txt","r");
+
+    while(fgets(line,100,f))
+        if(strstr(line,word))
+            printf("%s",line);
+
+    fclose(f);
+    return 0;
+}
+input:
+Enter word: Linux
+output:
+Linux is an operating system
