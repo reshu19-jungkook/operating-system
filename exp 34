@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int start,len,i;
+
+    printf("Enter starting block: ");
+    scanf("%d",&start);
+
+    printf("Enter number of blocks: ");
+    scanf("%d",&len);
+
+    printf("Allocated blocks: ");
+    for(i=0;i<len;i++)
+        printf("%d ",start+i);
+
+    return 0;
+}
+
+input:
+Enter starting block: 10
+Enter number of blocks: 5
+output:
+Allocated blocks: 10 11 12 13 14
