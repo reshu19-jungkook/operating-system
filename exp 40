@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <sys/stat.h>
+
+int main() {
+    FILE *f;
+
+    f = fopen("test.txt", "w");
+    fprintf(f, "Hello Linux");
+    fclose(f);
+
+    chmod("test.txt", 0755);
+
+    printf("File created successfully\n");
+    printf("Permissions set to: rwxr-xr-x\n");
+
+    return 0;
+}
+
+output:
+File created successfully
+Permissions set to: rwxr-xr-x
