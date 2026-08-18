@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    FILE *f;
+    char s[100];
+
+    f=fopen("data.txt","w");
+    printf("Enter text: ");
+    scanf(" %[^\n]",s);
+    fprintf(f,"%s",s);
+    fclose(f);
+
+    f=fopen("data.txt","r");
+    fscanf(f,"%[^\n]",s);
+    printf("File content: %s\n",s);
+    fclose(f);
+
+    return 0;
+}
+input:
+Enter text: Operating System
+output:
+Enter text: Operating System
